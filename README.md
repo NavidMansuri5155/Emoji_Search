@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# How To Make Emoji Search With React.js ?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://navid5155.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625813916786%2F62qXnQYAU.jpeg%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75" alt="logo don't copy..." />
 
-## Available Scripts
+EMOJI SEARCH REACT.JS
 
-In the project directory, you can run:
+<hr />
 
-### `npm start`
+I've made an Emoji Search with React.js. In which emoji comes by searching favourite emoji, And it's completely responsive, who gives as a card.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> NOTE : [@komal_bhatt](https://www.linkedin.com/in/komal-bhatt-a1779716a/?originalSubdomain=in) helped me in making this small project. I want to say my heartfelt thanks.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+THANK YOU SO MUCH FOR HELP ME LOT OF : [@komal_bhatt](https://www.linkedin.com/in/komal-bhatt-a1779716a/?originalSubdomain=in) ❤️❤️😊❤️❤️
 
-### `npm test`
+## Today we will know, how to make it.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First of all, I took the data, First of all, I took the data from the same hook, like this..
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+{SearchFilter.slice(7, 50).map((emoji, index) => {
+      return <div key={index} className="items">
+    //..... you data, like {emoji.title}.. etc
+    // i have import componenet <Card emoji={emoji}, index={index}     
+     </div >
+    
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Note: Don't forget to import your file of `JSON`
 
-### `npm run eject`
+## And after that, I put up a search bar to help us by funding emoji...
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```javascript
+ constructor() {
+    super();
+    this.state = {
+      search: ''
+    }
+  }
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  handleChange = (event) => {
+    this.setState({
+      search: event.target.value
+    });
+  }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  render() {
+    const { search } = this.state;
 
-## Learn More
+    const SearchFilter = EmojiData.filter(item => {
+      if (item.title.toLowerCase().indexOf(search.toLowerCase()) !== -1)
+        return true
+      if (item.keywords.toLowerCase().indexOf(search.toLowerCase()) !== -1)
+        return true
+      return false
+    })
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+<hr />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Project Code 👨‍💻
 
-### Code Splitting
+Source Code:    https://github.com/NavidMansuri5155/Emoji_Search
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<hr />
 
-### Analyzing the Bundle Size
+# Tech Stack 💻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<ul>
+  <li>HOW TO MAKE EMOJI SEARCH APP.</li>
+  <li>HOW TO IMPORT JSON FILES.</li>
+  <li>HOW USE slice.</li>
+  <li>HOW TO IMPORT FILE WITH PROPS.</li>
+</ul>
 
-### Making a Progressive Web App
+<hr />
+Thank you for reading 🙏
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you enjoyed this article or found it helpful, give it a thumbs-up 👍
 
-### Advanced Configuration
+Feel free to connect 👋
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks 😙
