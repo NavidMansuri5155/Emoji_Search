@@ -1,10 +1,12 @@
 import './App.css';
-import Se from "./componenet/SearchBar";
+import SearchBar from "./componenet/SearchBar";
+import Header from './componenet/Header';
 
 function App() {
   return (
     <div className="App">
-      <Se />
+      <Header />
+      <SearchBar />
     </div>
   );
 }

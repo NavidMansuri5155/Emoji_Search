@@ -170,7 +170,7 @@
         "keywords": "expressionless face mad smiley neutral emotion emotion"
     },
     {
-        "title": "Unamused",
+        "title": " Confused Face",
         "symbol": "😒",
         "keywords": "unamused face sad mad smiley tired emotion emotion"
     },
@@ -356,6 +356,11 @@
     },
     {
         "title": "Poop",
+        "symbol": "💩",
+        "keywords": "pile of poo bathroom shit sol sol diarrhea diarrhea"
+    },
+    {
+        "title": "komal",
         "symbol": "💩",
         "keywords": "pile of poo bathroom shit sol sol diarrhea diarrhea"
     },
