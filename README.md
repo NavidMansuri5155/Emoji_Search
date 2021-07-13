@@ -64,6 +64,8 @@ First of all, I took the data, First of all, I took the data from the same hook,
 
 Source Code:    https://github.com/NavidMansuri5155/Emoji_Search
 
+Live Demo :     https://emoji-search1.herokuapp.com/
+
 <hr />
 
 # Tech Stack 💻
